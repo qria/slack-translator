@@ -6,6 +6,7 @@ import requests
 
 
 app = Flask(__name__)
+app.config['DEBUG'] = True
 
 if 'REDIS_URL' in os.environ:
     cache = Cache(app, config={
